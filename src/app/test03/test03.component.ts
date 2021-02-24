@@ -26,7 +26,7 @@ export class Test03Component {
     this.messageList.push(this.sourceList[index]);
 
     setTimeout(() => {
-      this.messageList.pop();
+      this.messageList.shift();
     }, 5000);
   }
 }
