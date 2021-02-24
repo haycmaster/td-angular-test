@@ -1,0 +1,96 @@
+$screen-lg: 1024px;
+$screen-md: 768px;
+$btn-width-lg: 350px;
+$btn-heigh-lg: 70px;
+$btn-width-md: 320px;
+$btn-heigh-md: 50px;
+$opacity: 0.9;
+$grey: rgb(185, 184, 184);
+$gray: rgb(233, 231, 231);
+
+.app-container {
+  width: 50%;
+  margin: 0 auto;
+  border: 2px solid $grey;
+  padding: 10px 10px;
+
+  .content-wrapper {
+    opacity: $opacity;
+    padding: 20px 0 10px 3px;
+
+    .content1 {
+      font-size: 20px;
+    }
+  }
+
+  .row-wrapper {
+    background-color: $gray;
+    min-height: 40px;
+    margin: 3px;
+  }
+  .from-label{
+    vertical-align: middle;
+    padding: 10px;
+  }
+
+  .from-data {
+    font-weight: 700;
+    vertical-align: middle;
+    padding: 10px;
+  }
+
+  .form-row-wrapper {
+    background-color: rgb(233, 231, 231);
+    min-height: 50px;
+    margin: 3px;
+  }
+
+  .tansfer-label{
+    vertical-align: middle;
+    padding: 15px;
+  }
+  
+  .tansfer-input {
+    padding: 7px 7px;
+    .is-invalid {
+      border: 2px solid RGBA(220,53,69, 0.8);
+    }
+  }
+  .action-panel {
+   font-size: 14px;
+   text-align: right; 
+   padding-top: 20px;
+
+   .td-btn {
+     min-width: 150px;
+   }
+  }
+
+  .msg-panel {
+    font-size: 14px;
+    min-height: 40px;
+    margin: 15px;
+    padding: 10px 0 10px 10px;
+  }
+}
+
+@media only screen and (min-width: $screen-lg) {
+  .app-container {
+    width: 50%;
+  }
+}
+
+@media only screen
+  and (min-width: $screen-md)
+  and (max-width: $screen-lg - 1) {
+    .app-container {
+      width: 90%;
+    }
+}
+
+@media only screen 
+  and (max-width: $screen-md - 1) {
+    .app-container {
+      width: 98%;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="content" role="main">
+  <div class="row row-wrapper">
+    <div class="col-sm-4 from-label" tabindex="0">
+      <div class="msg-container">
+        <div *ngFor="let message of messageList" class="msg">
+          {{ message }}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 from-data">
+      <div class="create-btn" (click)="onClick()">Click</div>
+    </div>
+  </div>
+</div>
+
+  

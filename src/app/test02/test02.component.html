@@ -1,0 +1,82 @@
+<h1>Test 2 component</h1>
+
+<form [formGroup]="form">
+  <div class="app-container">
+    <div class="row content-wrapper">
+      <div class="col-sm-12 content1">From</div>
+    </div>
+    <div class="row row-wrapper">
+      <div class="col-sm-6 from-label" tabindex="0">
+        Account Name: 
+      </div>
+      <div class="col-sm-6 from-data" tabindex="0">
+        Checking
+      </div>
+    </div>
+    <div class="row row-wrapper">
+      <div class="col-sm-6 from-label" tabindex="0">
+        Account Number: 
+      </div>
+      <div class="col-sm-6 from-data" tabindex="0">
+        123456789
+      </div>
+    </div>
+    <div class="row row-wrapper">
+      <div class="col-sm-6 from-label" tabindex="0">
+        Current Balance: 
+      </div>
+      <div class="col-sm-6 from-data" tabindex="0">
+        $5,000.00
+      </div>
+    </div>
+    <div class="row content-wrapper">
+      <div class="col-sm-12 content1" tabindex="0">
+        Transfer details
+      </div>
+    </div>
+    <div class="row form-row-wrapper">
+      <div class="col-sm-6 tansfer-label" tabindex="0">
+        Amount to transfer:
+      </div>
+      <div class="col-sm-6 tansfer-input">
+        <input 
+          type="number"
+          class="form-control"
+          formControlName="amount"
+          [ngClass]="{'is-invalid': !(valid$ | async) }"
+        >
+      </div>
+    </div>
+    <div class="row form-row-wrapper">
+      <div class="col-sm-6 tansfer-label" tabindex="0">
+        Frequency:
+      </div>
+      <div class="col-sm-6 tansfer-input">
+        <select class="form-control" formControlName="frequency">
+          <option value="1">Every day</option>
+          <option value="2">Every week</option>
+          <option value="3">Every month</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 action-panel">
+        <button 
+          type="button"
+          class="btn btn-primary td-btn"
+          (click)="submitForm()"
+        >
+          {{ btnLabel$ | async}}
+        </button>
+      </div>
+    </div>
+    <div class="row ">
+      <div #messageDiv tabindex="0"
+        class="col-sm-11 msg-panel"
+        [attr.aria-label]="message$ | async"
+      >
+        {{ message$ | async}}
+      </div>
+    </div>
+  </div>
+</form>
